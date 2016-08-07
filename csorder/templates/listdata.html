@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Menu </title>
+        <meta charset='utf-8'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <style>
+        th { text-align: center; }
+        div.menus {
+            text-align: center;
+            padding: 40px 15px;
+        }
+        </style>
+    </head>
+    <body>
+
+
+        <div class="container">
+            <div class="menus"
+                <p>
+				<table class="table">
+				<tr>
+                        <th>客戶</th>
+                        <th>商品</th>
+                        <th>客戶訂單號碼</th>
+                        <th>訂貨日</th>
+						<th>訂貨量</th>
+                        <th>出貨日</th>
+                        <th>出貨量</th>
+                        <th>累計出貨量</th>
+						<th>未出貨量</th>
+                    </tr>
+                {% for r in alldata %}
+              
+                    
+                    <tr> {% for value in r %}
+                     <td>{{value}}</td>
+                         {% endfor %}
+                    </tr>
+                {% endfor %}
+            </div>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
